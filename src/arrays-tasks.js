@@ -324,7 +324,7 @@ function selectMany(arr, childrenSelector) {
  */
 function calculateBalance(arr) {
   if (arr.length === 0) return 0;
-  return arr.reduce().
+  return arr.reduce((acc, [income, expense]) => acc + (income - expense), 0);
 }
 
 /**
